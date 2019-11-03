@@ -1,0 +1,60 @@
+html {
+    font-size: 16;
+}
+
+body{
+    font-family: $text-font;
+    color: black;
+    padding: $main-padding;
+}
+
+.title {
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.digimon {
+    height: 150px;
+    position: relative;
+    background: $background-figures;
+    padding-top: 10px;
+    border: 1px solid $background-text;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow:hidden;
+
+    &__image {
+        height:100%;
+        width:100%;
+        object-fit: contain;
+        transition: all 0.5s;
+    }
+
+    &__name {
+        position: absolute;
+        color:white;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        background: $background-text;
+        transition: all 0.5s;
+    }
+
+    &:hover {
+        .digimon__image {
+            transform: scale(1.6);
+        }
+
+        .digimon__name {
+            background: blueviolet;
+        }
+    }
+}
